@@ -33,12 +33,12 @@ DTCAN_UAT=
   )
 
 
-## This alias is used in DEV portal, so keep it as is
+## This alias is used in the DEV portal, so keep it as is
 DTCAN =
   (DESCRIPTION=
     (ADDRESS=
       (PROTOCOL=TCP)
-      (HOST= dtcan-dev-db.clxnyfbnrhge.ca-central-1.rds.amazonaws.com)
+      (HOST= DTCAN-DEV-DB-EC2.DTNNP.DEALERTRACK.CA)
       (PORT=1521)
     )
     (CONNECT_DATA=
@@ -46,12 +46,12 @@ DTCAN =
     )
   )
 
-## This alias is same as DTCAN above, but with different alias name to explicitly mention DEV env
+## This alias is the same as DTCAN above, but with a different alias name to explicitly mention DEV env
 DTCAN_DEV =
   (DESCRIPTION=
     (ADDRESS=
       (PROTOCOL=TCP)
-      (HOST= dtcan-dev-db.clxnyfbnrhge.ca-central-1.rds.amazonaws.com)
+      (HOST= DTCAN-DEV-DB-EC2.DTNNP.DEALERTRACK.CA)
       (PORT=1521)
     )
     (CONNECT_DATA=
@@ -64,6 +64,18 @@ ETL_DEV =
     (ADDRESS=
       (PROTOCOL=TCP)
       (HOST= DTCANETL.CLXNYFBNRHGE.CA-CENTRAL-1.RDS.AMAZONAWS.COM)
+      (PORT=1521)
+    )
+    (CONNECT_DATA=
+      (SID=DTCANETL)
+    )
+  )
+
+ETL_PROD =
+  (DESCRIPTION=
+    (ADDRESS=
+      (PROTOCOL=TCP)
+      (HOST= DTCANETLPROD.CEJ8MBDF2LYT.CA-CENTRAL-1.RDS.AMAZONAWS.COM)
       (PORT=1521)
     )
     (CONNECT_DATA=
